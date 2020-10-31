@@ -14,6 +14,8 @@
 		2B73022F254ADAF300099277 /* MyCarsCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B73022D254ADAF300099277 /* MyCarsCoreData.xcdatamodeld */; };
 		2B730231254ADAF400099277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B730230254ADAF400099277 /* Assets.xcassets */; };
 		2B730234254ADAF400099277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B730232254ADAF400099277 /* LaunchScreen.storyboard */; };
+		2B73023C254ADB1F00099277 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B73023B254ADB1F00099277 /* data.plist */; };
+		2BA21DD5254BF66500AF090E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA21DD4254BF66500AF090E /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2B730230254ADAF400099277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B730233254ADAF400099277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B730235254ADAF400099277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B73023B254ADB1F00099277 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		2BA21DD4254BF66500AF090E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +65,11 @@
 				2B730224254ADAF200099277 /* AppDelegate.swift */,
 				2B730226254ADAF300099277 /* SceneDelegate.swift */,
 				2B730228254ADAF300099277 /* ViewController.swift */,
+				2BA21DD4254BF66500AF090E /* Settings.swift */,
 				2B73022A254ADAF300099277 /* Main.storyboard */,
 				2B730230254ADAF400099277 /* Assets.xcassets */,
 				2B730232254ADAF400099277 /* LaunchScreen.storyboard */,
+				2B73023B254ADB1F00099277 /* data.plist */,
 				2B730235254ADAF400099277 /* Info.plist */,
 				2B73022D254ADAF300099277 /* MyCarsCoreData.xcdatamodeld */,
 			);
@@ -130,6 +136,7 @@
 			files = (
 				2B730234254ADAF400099277 /* LaunchScreen.storyboard in Resources */,
 				2B730231254ADAF400099277 /* Assets.xcassets in Resources */,
+				2B73023C254ADB1F00099277 /* data.plist in Resources */,
 				2B73022C254ADAF300099277 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +152,7 @@
 				2B73022F254ADAF300099277 /* MyCarsCoreData.xcdatamodeld in Sources */,
 				2B730225254ADAF300099277 /* AppDelegate.swift in Sources */,
 				2B730227254ADAF300099277 /* SceneDelegate.swift in Sources */,
+				2BA21DD5254BF66500AF090E /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +306,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyCarsCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyCarsCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

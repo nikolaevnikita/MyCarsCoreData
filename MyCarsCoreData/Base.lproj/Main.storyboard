@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,147 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCarsCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Mark" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1x-ty-8JY">
+                                <rect key="frame" x="20" y="44" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lkI-id-rND"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dt-Nw-wYB">
+                                <rect key="frame" x="20" y="85" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="lamborginiMurcielago" translatesAutoresizingMaskIntoConstraints="NO" id="Zyg-6F-6YZ">
+                                <rect key="frame" x="20" y="153" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="r9X-lZ-ezk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last time started:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3us-LX-Vqk">
+                                <rect key="frame" x="20" y="274" width="128" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of trips:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co9-RG-iF8">
+                                <rect key="frame" x="20" y="302" width="119" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: X/10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBm-m3-QOY">
+                                <rect key="frame" x="288" y="274" width="101" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-4A-rZq">
+                                <rect key="frame" x="2" y="348" width="410" height="32"/>
+                                <segments>
+                                    <segment title="Lamborgini"/>
+                                    <segment title="Ferrari"/>
+                                    <segment title="Mercedes"/>
+                                    <segment title="Nissan"/>
+                                    <segment title="BMW"/>
+                                </segments>
+                                <connections>
+                                    <action selector="choiceAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="H4L-R2-FDe"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bS-Hx-X3P">
+                                <rect key="frame" x="282" y="830" width="112" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="VIN-JD-ko6"/>
+                                </constraints>
+                                <state key="normal" title="Rate" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kx1-ry-jy0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="php-IA-IgE">
+                                <rect key="frame" x="20" y="830" width="112" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="973-0t-biX"/>
+                                </constraints>
+                                <state key="normal" title="Start engine" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ln0-ho-efC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myChoice" translatesAutoresizingMaskIntoConstraints="NO" id="sq5-Iz-rS1">
+                                <rect key="frame" x="20" y="393" width="374" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="jrx-C8-1tf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2bS-Hx-X3P" secondAttribute="trailing" constant="20" id="5i5-97-PpN"/>
+                            <constraint firstItem="3us-LX-Vqk" firstAttribute="top" secondItem="Zyg-6F-6YZ" secondAttribute="bottom" constant="21" id="7vA-Ww-YpM"/>
+                            <constraint firstItem="sq5-Iz-rS1" firstAttribute="top" secondItem="ofn-4A-rZq" secondAttribute="bottom" constant="14" id="9sD-fh-loD"/>
+                            <constraint firstItem="php-IA-IgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="B10-Ls-tXu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="co9-RG-iF8" secondAttribute="trailing" constant="275" id="DuK-gY-QcH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zyg-6F-6YZ" secondAttribute="trailing" constant="20" id="IYk-JQ-PFl"/>
+                            <constraint firstItem="2bS-Hx-X3P" firstAttribute="leading" relation="lessThanOrEqual" secondItem="php-IA-IgE" secondAttribute="trailing" constant="150" id="Iqz-Ac-hKx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sq5-Iz-rS1" secondAttribute="trailing" constant="20" id="JJF-tT-Yi0"/>
+                            <constraint firstItem="Zyg-6F-6YZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JLN-5P-Uht"/>
+                            <constraint firstItem="3us-LX-Vqk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kdu-h7-W47"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yBm-m3-QOY" secondAttribute="trailing" constant="25" id="Me5-8r-AHS"/>
+                            <constraint firstItem="Zyg-6F-6YZ" firstAttribute="top" secondItem="1dt-Nw-wYB" secondAttribute="bottom" constant="41" id="Mjs-zQ-QDM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1dt-Nw-wYB" secondAttribute="trailing" constant="20" id="O1E-cT-zUG"/>
+                            <constraint firstItem="q1x-ty-8JY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QOd-Hl-KAY"/>
+                            <constraint firstItem="1dt-Nw-wYB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RiD-di-gNh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="php-IA-IgE" secondAttribute="bottom" id="Rwy-Lp-58e"/>
+                            <constraint firstItem="q1x-ty-8JY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UR3-u5-sIV"/>
+                            <constraint firstItem="1dt-Nw-wYB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0301339" id="VMV-M2-6gq"/>
+                            <constraint firstItem="yBm-m3-QOY" firstAttribute="leading" relation="lessThanOrEqual" secondItem="3us-LX-Vqk" secondAttribute="trailing" constant="140" id="Vt0-cf-MSz"/>
+                            <constraint firstItem="co9-RG-iF8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xib-hO-ttR"/>
+                            <constraint firstItem="yBm-m3-QOY" firstAttribute="top" secondItem="Zyg-6F-6YZ" secondAttribute="bottom" constant="21" id="e2I-pM-5UN"/>
+                            <constraint firstItem="ofn-4A-rZq" firstAttribute="top" secondItem="co9-RG-iF8" secondAttribute="bottom" constant="26.5" id="gGe-vP-u9N"/>
+                            <constraint firstItem="sq5-Iz-rS1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hSe-gX-uPI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2bS-Hx-X3P" secondAttribute="bottom" id="lYW-xC-xE4"/>
+                            <constraint firstItem="1dt-Nw-wYB" firstAttribute="top" secondItem="q1x-ty-8JY" secondAttribute="bottom" constant="20" id="rYb-sK-Vbm"/>
+                            <constraint firstItem="co9-RG-iF8" firstAttribute="top" secondItem="3us-LX-Vqk" secondAttribute="bottom" constant="8" id="sQr-cK-5Hy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q1x-ty-8JY" secondAttribute="trailing" constant="20" id="upw-6N-OsZ"/>
+                            <constraint firstItem="ofn-4A-rZq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="w9K-uK-fQy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ofn-4A-rZq" secondAttribute="trailing" constant="2" id="wze-j8-2iW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="carImageView" destination="Zyg-6F-6YZ" id="22k-zA-cn5"/>
+                        <outlet property="lastTimeStartedLabel" destination="3us-LX-Vqk" id="cZN-jk-Zkx"/>
+                        <outlet property="markLabel" destination="q1x-ty-8JY" id="obB-hJ-rDJ"/>
+                        <outlet property="modelLabel" destination="1dt-Nw-wYB" id="VF4-Pw-9eX"/>
+                        <outlet property="myChoiseImageView" destination="sq5-Iz-rS1" id="sHG-Jp-0By"/>
+                        <outlet property="numberOfTripsLabel" destination="co9-RG-iF8" id="Uj3-dN-a2E"/>
+                        <outlet property="ratingLabel" destination="yBm-m3-QOY" id="13I-oC-vXa"/>
+                        <outlet property="segmentedControl" destination="ofn-4A-rZq" id="eqc-Ey-m45"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button" width="112" height="32"/>
+        <image name="lamborginiMurcielago" width="210" height="101"/>
+        <image name="myChoice" width="150" height="150"/>
+    </resources>
 </document>
