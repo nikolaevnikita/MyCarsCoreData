@@ -5,4 +5,4 @@ The app stores information about your personal cars: the date of the last trip, 
 
 #### User interface:
 
-![](https://github.com/nikolaevnikita/MyCarsCoreData/blob/master/MyCars_screen.png)
+<img src="https://github.com/nikolaevnikita/MyCarsCoreData/blob/master/MyCars_screen.png" width="300">
